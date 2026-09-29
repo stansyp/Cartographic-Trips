@@ -1,0 +1,172 @@
+html, body, html * {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.legend-box {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    max-width: 60vw;
+    width: 34vw;
+    max-height: 60vh;
+    overflow-y: auto;
+    z-index: 9999;
+    background-color: #f7f4ea;
+    border: 2px solid grey;
+    border-radius: 16px;
+    font-size: 16px;
+    padding: 0 10px;
+    opacity: 1;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    
+    .title {
+        align-items: flex-start;  /* <-- najważniejsze */
+        font-family: "Crimson Text", serif;
+        color: #563f32;
+        font-size: 32px;
+        font-weight: 600;
+    }
+    
+    .subtitle {
+        font-family: "Crimson Text", serif;
+        font-size: 20px;
+        color:#563f32;
+        font-weight: 600;
+        margin-bottom:1em; 
+        border-bottom: 2px solid #563f32;
+        width: fit-content;
+        }
+    .flag-humbak {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        max-width: 250px;
+        height: auto;
+        pointer-events: none;
+    }
+    .schedule {              
+        .legend-box p {
+            padding: 0 1.2em;      
+            text-indent: -1.2em;
+            .relic {
+                font-family: "Times New Roman", Times, serif;
+                font-style:italic
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .legend-box {
+        width: 90vw;
+        max-height: 50vh;
+        font-size: 10px;
+        .title {
+            font-size: 18px;
+        }
+        .subtitle {
+            font-size: 12px;
+        }
+        .flag-humbak {
+            right: 10px;
+            max-width: 50px;  
+            opacity: 0.5;
+        }
+        .icon-expanded {
+          font-size: 14px;
+        margin-right: 4px;
+        }
+    }    
+    
+}
+
+.legend-box.collapsed {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.legend-box:not(.collapsed) .legend-toggle {
+  display: none !important;
+}
+
+.legend-box.collapsed .legend-content {
+    display: none;
+}
+
+.legend-box.collapsed .legend-toggle {
+    margin: 0;
+    font-size: 28px;
+}
+
+.legend-toggle {
+    font-size: 24px;
+    color:orange;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.legend-icon {
+  font-size: 20px;
+  color: orange;
+  cursor: pointer;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.camp-icon {
+    display: flex;
+    .icon-img {
+        width: 26px;
+        height: 26px;
+        margin-right: 6px;
+    }    
+    .icon-label {
+        line-height: 1.1em;
+        white-space: nowrap;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+.icon-label.label-white {
+    color: white;
+}
+
+.label-black {
+    color: black !important;
+}
+
+.bus-tooltip-container {
+    padding: 10px;
+    background-color: red;
+    .label {
+        font-size: 12px;
+    }    
+}
+
+.icon-collapsed {
+    font-size: 24px;
+    color: orange;
+    margin:0;
+    cursor: pointer;
+}
+
+.icon-expanded {
+  font-size: 24px;
+  color: orange;
+  margin-right: 8px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+
+
+
