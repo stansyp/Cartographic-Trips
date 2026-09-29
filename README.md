@@ -8,5 +8,5 @@ The project aims to demonstrate how, with minimal effort, a small set of depende
 
 ## 🔍 Online Preview
 
-- 👉 [San river trip 2025](https://stansyp.github.io/cartographic-trips/san-river-2025.html/)
-- 👉 [Tleń trip 2026](https://stansyp.github.io/cartographic-trips/tlen-2026.html/)
+- 👉 [San river trip 2025](https://stansyp.github.io/cartographic-trips/san-river-2025.html)
+- 👉 [Tleń trip 2026](https://stansyp.github.io/cartographic-trips/tlen-2026.html)
