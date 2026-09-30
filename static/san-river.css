@@ -5,7 +5,7 @@ html, body, html * {
 
 .legend-box {
     position: fixed;
-    bottom: 10px;
+    bottom: 20px;
     right: 10px;
     max-width: 60vw;
     width: 34vw;
@@ -21,7 +21,7 @@ html, body, html * {
     transition: transform 0.4s ease, opacity 0.4s ease;
     
     .title {
-        align-items: flex-start;  /* <-- najważniejsze */
+        align-items: flex-start;  
         font-family: "Crimson Text", serif;
         color: #563f32;
         font-size: 32px;
@@ -167,6 +167,21 @@ html, body, html * {
   vertical-align: middle;
 }
 
+.leaflet-control-layers {
+    font-size: 12px;
+}
 
+.leaflet-control-layers-base::before,
+.leaflet-control-layers-overlays::before {
+    display: block;
+    font-weight: bold;
+    padding: 3px 0 5px;
+}
 
+.leaflet-control-layers-base::before {
+    content: "MAPS";
+}
 
+.leaflet-control-layers-overlays::before {
+    content: "ROUTES & PLACES";
+}

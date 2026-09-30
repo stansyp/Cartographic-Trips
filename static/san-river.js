@@ -5,8 +5,7 @@ window.onload = function () {
 function waitForFoliumMap() {
     for (let key in window) {
         if (key.startsWith("map_") && window[key] instanceof L.Map) {
-            const map = window[key];
-            console.log("Mapa znaleziona:", key);
+            const map = window[key];            
             min_zoom(map);
             map_boundaries(map);
             bindMarkerClickEvents();
@@ -15,13 +14,12 @@ function waitForFoliumMap() {
             return; 
         }
     }
-    console.log("Jeszcze nie znaleziono mapy...");
     setTimeout(waitForFoliumMap, 200);
 }
 
 function min_zoom(map) {
-    map.setMinZoom(10);
-    map.setMaxZoom(15);
+    map.setMinZoom(9);
+    map.setMaxZoom(18);
     map.options.zoomSnap = 0;
     map.options.zoomDelta = 0.1;
 }
@@ -41,7 +39,6 @@ function map_boundaries(map) {
 function bindMarkerClickEvents() {
     const mapKey = Object.keys(window).find(k => k.startsWith("map_"));
     if (!mapKey || !(window[mapKey] instanceof L.Map)) {
-        console.warn("Nie znaleziono mapy do OMS.");
         return;
     }
     const map = window[mapKey];
@@ -99,3 +96,4 @@ function layerchange(e) {
         label.style.color = e.name === 'Satellite' ? 'wheat' : 'black';
     });
 }
+
