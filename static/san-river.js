@@ -20,8 +20,8 @@ function waitForFoliumMap() {
 function min_zoom(map) {
     map.setMinZoom(9);
     map.setMaxZoom(18);
-    map.options.zoomSnap = 0;
-    map.options.zoomDelta = 0.1;
+    map.options.zoomSnap = 0.25;
+    map.options.zoomDelta = 0.25;
 }
 
 function map_boundaries(map) {
@@ -34,6 +34,21 @@ function map_boundaries(map) {
     map.on("drag", function () {
         map.panInsideBounds(bounds, { animate: false });
     });
+}
+
+function layerchange(e) {
+   
+    var mapInstance = e.target; 
+
+    document.querySelectorAll('.icon-label').forEach(label => {
+        label.style.color = e.name === 'Satellite' ? 'wheat' : 'black';
+    });
+
+    if (e.layer && e.layer.options && e.layer.options.maxZoom) {
+        var layerMaxZoom = e.layer.options.maxZoom;
+        var dynamicMaxZoom = Math.min(18, layerMaxZoom); 
+        mapInstance.setMaxZoom(dynamicMaxZoom);
+    }
 }
 
 function bindMarkerClickEvents() {
@@ -89,11 +104,4 @@ function hideLegend() {
     }
 }
 
-function layerchange(e) {
-    document.querySelectorAll('.icon-label').forEach(label => {
-        //label.classList.remove('label-white', 'label-black');
-        //label.classList.add(e.name === 'Satellite' ? 'label-white' : 'label-black');
-        label.style.color = e.name === 'Satellite' ? 'wheat' : 'black';
-    });
-}
 
