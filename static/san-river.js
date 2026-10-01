@@ -18,10 +18,10 @@ function waitForFoliumMap() {
 }
 
 function min_zoom(map) {
-    map.setMinZoom(9);
-    map.setMaxZoom(18);
-    map.options.zoomSnap = 0.25;
-    map.options.zoomDelta = 0.25;
+    map.setMinZoom(9.8);
+    map.setMaxZoom(19);
+    map.options.zoomSnap = 0.2;
+    map.options.zoomDelta = 0.2;
 }
 
 function map_boundaries(map) {
