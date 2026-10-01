@@ -8,5 +8,5 @@ The project aims to demonstrate how, with minimal effort, a small set of depende
 
 ## 🔍 Online Preview
 
-- 👉 [San River Kayaking Trip 2025](https://stansyp.github.io/Cartographic-Trips/san-river-2025.html) – demonstrates the use of basic Folium tools, including PolyLine, Marker, CustomIcon, and DivIcon.
+- 👉 [San River Kayaking Trip 2025](https://stansyp.github.io/Cartographic-Trips/san-river-2025.html) – demonstrates the use of basic Folium tools, including PolyLine, Marker, CustomIcon, DivIcon and AntPath.
 - 👉 [Wda River Kayaking Trip 2026](https://stansyp.github.io/cartographic-trips/tlen-2026.html)
